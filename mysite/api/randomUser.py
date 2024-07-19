@@ -3,8 +3,8 @@ import requests
 api = requests.get('https://randomuser.me/api/')
 print(api.status_code)
 
-gender = api.json()['results'][0]['location']['street']['number']
-print(gender)
-
+name = api.json()['results'][0]['name']['first']
 email = api.json()['results'][0]['email']
-print(email)
+gender = api.json()['results'][0]['gender']
+password = api.json()['results'][0]['login']['password']
+phone = api.json()['results'][0]['phone']
