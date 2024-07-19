@@ -51,6 +51,7 @@ class UserCreateView(APIView):
 class UserView(APIView): 
     def get (self, request, pk=None): 
         users = User.objects.all()
+        print(users)
         serializer = UserSerializer(users, many=True)
         return Response(serializer.data)
     
